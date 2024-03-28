@@ -208,6 +208,10 @@ server.post('/questions', async (request, reply) => {
   return getNextQuestion
 })
 
+server.get('/status', function (req, res) {
+  res.send("serve is up")
+})
+
 // Start the server
 server.listen(process.env.PORT, (err) => {
   if (err) {
